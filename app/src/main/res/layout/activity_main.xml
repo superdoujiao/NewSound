@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.serenade.newsound.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/fragment"
+        android:layout_weight="13" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:id="@+id/radioGroup"
+        android:orientation="horizontal">
+
+        <RadioButton
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:id="@+id/mine"
+            android:text="我的" />
+
+        <RadioButton
+            style="@style/RadioButtonStyle"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:id="@+id/music"
+            android:text="乐库" />
+
+        <RadioButton
+            style="@style/RadioButtonStyle"
+            android:id="@+id/find"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="发现" />
+
+        <RadioButton
+            style="@style/RadioButtonStyle"
+            android:id="@+id/synchronize"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="同步" />
+    </RadioGroup>
+</LinearLayout>
