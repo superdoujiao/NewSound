@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightGray">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/find_trends_discuss_headimg"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:id="@+id/find_trends_discuss_username"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/find_trends_discuss_headimg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textColor="@color/darkGray"
+            android:id="@+id/find_trends_discuss_date"
+            android:layout_toRightOf="@id/find_trends_discuss_headimg"
+            android:layout_below="@id/find_trends_discuss_username"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="body"
+            android:id="@+id/find_trends_discuss_body"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/find_trends_discuss_headimg"
+            android:layout_below="@id/find_trends_discuss_date"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/findframent_dianzan"
+            android:text="0"
+            android:textColor="@color/black"
+            android:button="@null"
+            android:layout_alignParentRight="true"
+            android:id="@+id/find_trends_discuss_dianzan"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_alignLeft="@id/find_trends_discuss_body"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

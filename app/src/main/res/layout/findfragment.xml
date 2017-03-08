@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:background="#FF3D00">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/findfragment_rg_search"
+            android:src="@drawable/smssdk_search_icon"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/findfragment_rg"
+            android:layout_centerHorizontal="true"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="发现"
+                android:button="@null"
+                android:background="@drawable/findfragment_rg_bg_left"
+                android:textColor="@drawable/findfragment_rg_text_color"
+                android:id="@+id/findfragment_rg_find"/>
+
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:text="附近人"
+                android:button="@null"
+                android:background="@drawable/findfragment_rg_bg_right"
+                android:textColor="@drawable/findfragment_rg_text_color"
+                android:id="@+id/findfragment_rg_nearby"/>
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_00000"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/findfragment_framelayout"
+        android:layout_weight="9"></FrameLayout>
+
+</LinearLayout>

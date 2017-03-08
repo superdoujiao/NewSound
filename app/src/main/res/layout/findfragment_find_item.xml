@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/findfragment_find_iv"
+        android:src="@drawable/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/findfragment_find_username"
+        android:text="username"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/findfragment_find_iv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="date"
+        android:id="@+id/findfragment_find_date"
+        android:layout_below="@id/findfragment_find_username"
+        android:layout_toRightOf="@id/findfragment_find_iv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="body"
+        android:layout_below="@id/findfragment_find_date"
+        android:id="@+id/findfragment_find_body"
+        android:layout_toRightOf="@id/findfragment_find_iv"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:id="@+id/findfragment_find_imgs"
+        android:visibility="gone"
+        android:layout_below="@id/findfragment_find_body"></LinearLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:src="@drawable/found_more"
+        android:id="@+id/findfragment_find_more"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关注"
+        android:id="@+id/findfragment_find_status"
+        android:layout_toLeftOf="@id/findfragment_find_more" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/found_zhuanfa"
+        android:layout_below="@id/findfragment_find_imgs"
+        android:id="@+id/findfragment_find_forward"
+        android:text="0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/findfragment_find_commment"
+        android:layout_below="@id/findfragment_find_imgs"
+        android:drawableLeft="@drawable/found_pinglun"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/findfragment_find_forward"
+        android:text="0"/>
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/findfragment_find_sex"
+        android:layout_toRightOf="@id/findfragment_find_username"
+        android:src="@drawable/found_girl"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableLeft="@drawable/findframent_dianzan"
+        android:text="0"
+        android:layout_below="@id/findfragment_find_imgs"
+        android:layout_toStartOf="@+id/findfragment_find_commment"
+        android:id="@+id/findfragment_find_radioButton" />
+
+
+</RelativeLayout>

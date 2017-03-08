@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/findfragment_find_swiperefresh">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/findfragment_find_recycleview"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/wifi"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:id="@+id/findfragment_find_tv"
+        android:text="出错了，请点击刷新"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="30dp"
+        app:backgroundTint="@color/orange"
+        android:layout_margin="5dp"
+        android:id="@+id/findfragment_find_floatingbutton"
+        android:layout_alignParentBottom="true"
+        app:elevation="0dp"
+        android:src="@drawable/found_add"
+        android:layout_height="30dp" />
+
+</RelativeLayout>
