@@ -1,10 +1,12 @@
 package com.example.serenade.newsound;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
+
+import com.example.serenade.newsound.find.fragment.FindFragment;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
     private RadioGroup radioGroup;
@@ -16,18 +18,19 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         setContentView(R.layout.activity_main);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioGroup.setOnCheckedChangeListener(this);
-        transaction = getFragmentManager().beginTransaction();
+        transaction=getSupportFragmentManager().beginTransaction();
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-        Fragment fragment = null;
+        FindFragment fragment = null;
         switch (checkedId) {
             case R.id.mine:
                 break;
             case R.id.music:
                 break;
             case R.id.find:
+                fragment=new FindFragment();
                 break;
             case R.id.synchronize:
                 break;
