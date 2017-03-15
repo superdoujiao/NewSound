@@ -5,10 +5,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/lightGray">
+        android:background="@color/white">
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:id="@+id/find_trends_discuss_headimg"
             android:src="@mipmap/ic_launcher"/>
         <TextView
@@ -52,6 +52,7 @@
             android:layout_height="1dp"
             android:background="@color/gray"
             android:layout_alignLeft="@id/find_trends_discuss_body"/>
+
     </RelativeLayout>
 
 

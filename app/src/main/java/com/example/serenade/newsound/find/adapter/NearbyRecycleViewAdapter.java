@@ -3,6 +3,8 @@ package com.example.serenade.newsound.find.adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.example.serenade.newsound.R;
 import com.example.serenade.newsound.find.bean.GetUserLenth;
 import java.math.BigDecimal;
@@ -42,7 +45,7 @@ public class NearbyRecycleViewAdapter extends RecyclerView.Adapter<NearbyRecycle
     }
 
     @Override
-    public void onBindViewHolder(NearbyItem holder, int position) {
+    public void onBindViewHolder(final NearbyItem holder, int position) {
         GetUserLenth.DataBean.ListBean bean = data.get(position);
         //holder.distance.setText(new BigDecimal(MapUtils.GetDistance(lat,lng))+"");
         double getDistance=bean.getDistance()/(double)1000;
@@ -55,7 +58,14 @@ public class NearbyRecycleViewAdapter extends RecyclerView.Adapter<NearbyRecycle
 
         holder.username.setText(bean.getUsername());
         if (bean.getHead_img()!=""){
-            Glide.with(context).load(bean.getHead_img()).into((ImageView) holder.head_img);
+            Glide.with(context).load(bean.getHead_img()).asBitmap().into(new BitmapImageViewTarget(holder.head_img){
+                @Override
+                protected void setResource(Bitmap resource) {
+                    RoundedBitmapDrawable corclur= RoundedBitmapDrawableFactory.create(context.getResources(),resource);
+                    corclur.setCircular(true);
+                    holder.head_img.setImageDrawable(corclur);
+                }
+            });
         }
 
 

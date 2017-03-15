@@ -10,8 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_height="80dp"
         android:background="#FF3D00">
 
 
@@ -21,6 +20,8 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:onClick="click"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
             android:id="@+id/findfragment_find_trends_back"
             android:src="@drawable/back"/>
 
@@ -28,6 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="动态"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:textSize="20sp"
             android:layout_centerInParent="true"
             android:textColor="@color/white"/>
 
@@ -36,7 +40,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/play_00000"
             android:layout_marginRight="10dp"
-            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
@@ -45,11 +49,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="10">
+        android:background="@color/white"
+        android:layout_weight="11">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp">
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -79,8 +87,8 @@
                 android:text="date"/>
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="20dp"
+                android:layout_width="20dp"
+                android:layout_height="10dp"
                 android:src="@drawable/found_more"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
@@ -97,6 +105,7 @@
                 android:layout_centerVertical="true"
                 android:id="@+id/find_trends_check"
                 android:textColor="@color/black"
+                android:layout_marginBottom="15dp"
                 android:text="喜欢,就赞一个吧"/>
             <CheckBox
                 android:layout_width="wrap_content"
@@ -111,20 +120,31 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/gray"
+            android:background="@color/lightGray"
             android:id="@+id/find_trends_discuss_count"
             android:text="最新评论（0）" />
 
-        <android.support.v7.widget.RecyclerView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/findfragment_find_trends_recycleview"></android.support.v7.widget.RecyclerView>
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/findfragment_find_trends_recycleview"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"></android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
+        android:id="@+id/findfragment_find_trends_linearlayout"
         android:layout_weight="1">
 
             <TextView
@@ -140,6 +160,8 @@
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="match_parent"
+            android:onClick="click"
+            android:id="@+id/findfragment_find_trends_pinglun"
             android:layout_toLeftOf="@id/findfragment_find_trends_shu">
             <TextView
                 android:layout_width="wrap_content"
@@ -155,6 +177,8 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_weight="1"
+            android:id="@+id/findfragment_find_trends_zhuanfa"
+            android:onClick="click"
             android:layout_toRightOf="@id/findfragment_find_trends_shu"
             android:layout_height="match_parent">
             <TextView
@@ -169,5 +193,29 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/findfragment_find_trends_linearlayoutsend"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:layout_height="wrap_content"
+            android:id="@+id/findfragment_find_trends_et" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:padding="0dp"
+            android:onClick="click"
+            android:id="@+id/findfragment_find_trends_send"/>
+    </LinearLayout>
+
 </LinearLayout>
 

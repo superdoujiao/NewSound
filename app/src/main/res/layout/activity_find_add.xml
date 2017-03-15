@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_find_add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.serenade.newsound.find.sencond.FindAdd">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FF3D00">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="click"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:textSize="20sp"
+            android:id="@+id/findfragment_find_add_back"
+            android:text="取消"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:onClick="click"
+            android:id="@+id/findfragment_find_add_send"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <com.example.serenade.newsound.find.view.MyTranspond
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:hint="说点什么吧..."
+            android:gravity="start|left"
+            android:id="@+id/findadd_myTranspond" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/found_add_pic"
+            android:layout_marginTop="10dp"
+            android:onClick="click"
+            android:id="@+id/findadd_imageView" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/lightGray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="不显示位置"
+            android:drawableRight="@drawable/right"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/found_add_address"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/lightGray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加音乐"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/right"
+            android:drawableLeft="@drawable/found_add_music"/>
+
+    </LinearLayout>
+
+</LinearLayout>

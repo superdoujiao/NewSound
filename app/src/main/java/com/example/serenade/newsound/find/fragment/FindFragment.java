@@ -32,6 +32,8 @@ public class FindFragment extends Fragment implements RadioGroup.OnCheckedChange
         rg= (RadioGroup) view.findViewById(R.id.findfragment_rg);
         rg.setOnCheckedChangeListener(this);
 
+//        rb= (RadioButton) view.findViewById(R.id.findfragment_rg_find);
+//        rb.setChecked(true);
         manager=getFragmentManager();
         return view;
     }
@@ -39,6 +41,7 @@ public class FindFragment extends Fragment implements RadioGroup.OnCheckedChange
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         Fragment fragment=null;
+
         switch (checkedId){
             case R.id.findfragment_rg_find:
                 fragment=new FindFragment_Find();

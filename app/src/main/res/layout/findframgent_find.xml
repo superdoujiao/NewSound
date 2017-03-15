@@ -27,13 +27,16 @@
         android:text="出错了，请点击刷新"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:layout_width="30dp"
+        android:layout_width="50dp"
         app:backgroundTint="@color/orange"
-        android:layout_margin="5dp"
         android:id="@+id/findfragment_find_floatingbutton"
-        android:layout_alignParentBottom="true"
         app:elevation="0dp"
+        android:onClick="onclick"
         android:src="@drawable/found_add"
-        android:layout_height="30dp" />
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

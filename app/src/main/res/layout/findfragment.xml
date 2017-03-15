@@ -5,8 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_height="80dp"
         android:background="#FF3D00">
 
 
@@ -15,19 +14,22 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
             android:id="@+id/findfragment_rg_search"
-            android:src="@drawable/smssdk_search_icon"/>
+            android:src="@drawable/search"/>
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:id="@+id/findfragment_rg"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_height="match_parent">
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:layout_width="60dp"
-                android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_height="40dp"
                 android:text="发现"
@@ -38,7 +40,6 @@
 
             <RadioButton
                 android:layout_width="60dp"
-                android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_height="40dp"
                 android:text="附近人"
@@ -53,8 +54,10 @@
             android:layout_height="wrap_content"
             android:src="@drawable/play_00000"
             android:layout_marginRight="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imageView" />
 
     </RelativeLayout>
 

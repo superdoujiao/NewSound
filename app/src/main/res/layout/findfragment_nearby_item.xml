@@ -5,11 +5,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@mipmap/ic_launcher"
             android:layout_margin="10dp"
             android:id="@+id/findfragment_nearby_item_head_img"/>
@@ -18,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="没有起名字的新聆用户"
+            android:textColor="@color/usernameBlue"
             android:layout_alignTop="@id/findfragment_nearby_item_head_img"
             android:layout_margin="10dp"
             android:layout_toRightOf="@id/findfragment_nearby_item_head_img"
@@ -35,8 +37,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="关注"
+            android:background="@null"
             android:layout_alignTop="@id/findfragment_nearby_item_head_img"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
             android:id="@+id/findfragment_nearby_item_status_id"/>
 
         <TextView
@@ -45,8 +49,10 @@
             android:gravity="center"
             android:drawableLeft="@drawable/found_address"
             android:text="0.01km"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:id="@+id/findfragment_nearby_item_distance"
-            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/findfragment_nearby_item_status_id"
             android:layout_below="@id/findfragment_nearby_item_status_id"/>
 
     </RelativeLayout>
@@ -54,6 +60,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="#F6F6F6"/>
+        android:background="@color/lightGray"/>
     
 </LinearLayout>
